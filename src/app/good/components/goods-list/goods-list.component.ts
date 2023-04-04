@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Goods } from '../../goods';
+import { GoodsService } from '../../goods.service';
 
 @Component({
   selector: 'sh-goods-list',
@@ -9,10 +10,10 @@ import { Goods } from '../../goods';
 export class GoodsListComponent implements OnInit{
   public goods: Goods[] = [];
 
-  constructor() {
-    for(let i: number=1; i<=10; i++){
-      this.goods.push(new Goods(1, `Good_${i}`, i, `Description_${i}`));
-    }
+  constructor(
+    private _goodsService: GoodsService
+  ) {
+    this.goods = this._goodsService.goods;
   }
 
   ngOnInit(): void {
