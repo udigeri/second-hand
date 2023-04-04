@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Goods } from '../../goods';
 import { GoodsService } from '../../goods.service';
 
@@ -13,7 +14,9 @@ export class GoodsListComponent implements OnInit{
   constructor(
     private _goodsService: GoodsService
   ) {
-    this.goods = this._goodsService.goods;
+    this._goodsService.getGoods().subscribe(
+      (data: Goods[]) => this.goods = data
+    );
   }
 
   ngOnInit(): void {

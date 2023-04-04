@@ -1,6 +1,6 @@
 export enum GoodsCategory {
-    OTHER,
-    MOTO,
-    ELECTRO,
-    HOUSE
+    OTHER = "OTHER",
+    MOTO = "MOTO",
+    ELECTRO = "ELECTRO",
+    HOUSE = "HOUSE"
 }

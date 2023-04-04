@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { GoodsCategory } from '../../export/goods-category';
 import { Goods } from '../../goods';
 
 @Component({
@@ -12,7 +13,7 @@ export class GoodsComponent implements OnInit{
   public goods: Goods;
 
   constructor() {
-    this.goods = new Goods(1, "muj1", 10, "Description");
+    this.goods = new Goods(1, "muj1", GoodsCategory.OTHER, 10, "Description");
   }
 
   ngOnInit(): void{

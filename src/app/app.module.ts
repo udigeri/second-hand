@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +13,8 @@ import { GoodsModule } from './good/goods.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GoodsModule
+    GoodsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
