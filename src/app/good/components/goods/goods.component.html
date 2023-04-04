@@ -2,5 +2,9 @@
     <strong>Id:</strong>  {{id}}<br>
     <strong>Name:</strong>  {{name}}<br>
     <strong>Price:</strong>  {{price}}<br>
-    <strong>Description:</strong>  {{description}}<br>
+    <input type="button" (click)="moreDetails=!moreDetails" value="{{moreDetails ? 'Hide details' : 'More details'}}">
+    <ng-container *ngIf="moreDetails">
+        <br>
+        <strong>Description:</strong>  {{description}}
+    </ng-container>
 </div>

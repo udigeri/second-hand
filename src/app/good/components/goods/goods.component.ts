@@ -7,6 +7,7 @@ import { Goods } from '../../goods';
   styleUrls: ['./goods.component.css']
 })
 export class GoodsComponent implements OnInit{
+  public moreDetails: boolean = false;
   @Input()
   public goods: Goods;
 
